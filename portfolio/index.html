@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true">
+ <img src="documents/foto1jpg.jpg" alt="Avatar">        </div>
+        <h2>Lorenzo Guerrini</h2>
+        <p class="role">Front-end Developer · UI/UX Designer</p>
+      </div>
+
+      <div class="info">
+        <ul>
+          <li><strong>Residence:</strong> Italy</li>
+          <li><strong>City:</strong> Frignano</li>
+          <li><strong>Age:</strong> 26</li>
+          <hr>
+          <li><strong > Education:</strong> At the University of Naples Parthenope in Science and Technology </li>
+          
+        </ul>
+ 
+             
+
+      </div>
+      <div class="languages">
+        <h3>Languages</h3>
+        <div class="lang"><span>Italian</span><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="lang"><span>English</span><div class="bar"><i style="width:70%"></i></div></div>
+      </div>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill"><label>HTML</label><div class="bar small"><i style="width:60%"></i></div></div>
+        <div class="skill"><label>CSS</label><div class="bar small"><i style="width:60%"></i></div></div>
+        <div class="skill"><label>JS</label><div class="bar small"><i style="width:60%"></i></div></div>
+        <div class="skill"><label>SWIFT</label><div class="bar small"><i style="width:60%"></i></div></div>
+        <div class="skill"><label>KOTLIN</label><div class="bar small"><i style="width:50%"></i></div></div>
+       <div class="skill"><label>C++</label><div class="bar small"><i style="width:70%"></i></div></div>
+        <div class="skill"><label>JAVA</label><div class="bar small"><i style="width:70%"></i></div></div>
+        <div class="skill"><label>C</label><div class="bar small"><i style="width:70%"></i></div></div>
+
+
+
+      </div>
+
+      <div class="downloads">
+        <h3>CERTIFICATES</h3>
+     
+        <a class="pdf" href="documents/base.pdf"  target="_blank">certificate iOS_BASE (PDF)</a>
+        <br>
+        <a class="pdf" href="documents/advanced.pdf" target="_blank">certificate IOS_ADVANCE (PDF)</a>
+      </div>
+
+      <footer class="sidefoot">• Made by Lorenzo Guerrini ©</footer>
+    </aside>
+
+    <main class="main">
+      <header class="hero">
+        <div class="hero-left">
+          <h1>Discover my Amazing<br/>Art Space!</h1>
+          <p class="tag">&lt;code&gt; I  build iOS and Android applications and other projects. &lt;/code&gt;</p>
+          <div class="hero-stats">
+            <div><strong>5</strong><span>Years Experience</span></div>
+            <div><strong>4</strong><span>Completed Projects</span></div>
+            <div><strong>5</strong><span>Happy Customers</span></div>
+            <div><strong>2+</strong><span>Honors & Awards</span></div>
+          </div>
+          <p><a class="btn" id="exploreBtn">EXPLORE NOW</a></p>
+        </div>
+        <div class="hero-right">
+          <div class="portrait">
+            <img src="documents/foto2.jpg " alt="portrait"/>
+          </div>
+        </div>
+      </header>
+<section class="services">
+  <h2>My Services</h2>
+  <div class="grid limited" id="servicesGrid">
+    <article class="card">
+      <h3>Web Development</h3>
+      <p>Progetti moderni, responsive e performanti.</p>
+      <a class="order" href="#">WATCH NOW ›</a>
+    </article>
+
+    <article class="card">
+      <h3>UI/UX Design</h3>
+      <p>Prototipi ad alta fedeltà e testing.</p>
+      <a class="order" href="#">ORDER NOW ›</a>
+    </article>
+
+    <article class="card">
+      <h3>Java Development</h3>
+      <p> games and apps.</p>
+      <a class="order" href="#">ORDER NOW ›</a>
+    </article>
+
+    <article class="card">
+      <h3>Game Design</h3>
+      <p>Level design, meccaniche e prototipi.</p>
+      <a class="order" href="#">ORDER NOW ›</a>
+    </article>
+
+    <article class="card">
+      <h3>Advertising</h3>
+      <p>Campagne performanti e concept creativi.</p>
+      <a class="order" href="#">ORDER NOW ›</a>
+    </article>
+  </div>
+  <button class="btn toggleBtn" data-target="servicesGrid">Show more</button>
+</section>
+
+<section class="projects">
+  <h2>My Projects</h2>
+  <div class="grid limited" id="projectsGrid">
+    <article class="card">
+      <h3>App iOS</h3>
+      <p>game developed as a team during the Apple Foundation, in two months..</p>
+      <a class="order" href="#" target="_blank">SEE DETAILS ›</a>
+    </article>
+
+    <article class="card">
+      <h3>Android Game</h3>
+      <p>funny alarm clock app that allows 100% wake up . KOTLIN - JetpackCompose</p>
+      <a class="order" href="https://github.com/LorenzoGuerrini9/FriendlyWakeUp.git" target="_blank">SEE DETAILS ›</a>
+    </article>
+
+    <article class="card">
+      <h3>Java Game</h3>
+      <p>Game developed in Java, during university.</p>
+      <a class="order" href="https://github.com/LorenzoGuerrini9/GiocoAuto2.git"target="_blank">SEE DETAILS ›</a>
+    </article>
+
+    <article class="card">
+      <h3>AI Experiment</h3>
+      <p>Prototipo con machine learning integrato in mobile app.</p>
+      <a class="order" href="#" target="_blank">SEE DETAILS ›</a>
+    </article>
+  </div>
+  <button class="btn toggleBtn" data-target="projectsGrid">Show more</button>
+</section>
+
+
+      <section class="contact">
+        <h2>Contacts</h2>
+   <p>Email: <span id="email1">Lorast99@gmail.com</span> <button onclick="copiaTesto()">Copy</button></p>
+
+       <hr>
+              <p >Number: <span id="number1" >+393886218752 </span><button onclick="copiaNumber()">Copy</button></p>
+              <hr>
+            
+<a class="formlink" href="form.html" title="Send me a message and ask me anithings">Send me a message and ask me anithings </a>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

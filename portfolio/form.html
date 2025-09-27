@@ -1,0 +1,129 @@
+
+
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Form</title>
+  <style>
+    /* Stile minimal, coerente con il tema dark del portfolio */
+    :root{
+      --bg:#1f1f23;
+      --panel:#2a2a2e;
+      --muted:#9aa0a6;
+      --accent:#f2b740;
+    }
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#eaeaea;display:flex;align-items:center;justify-content:center;height:100vh;padding:24px}
+    .form-wrap{width:100%;max-width:640px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:22px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+    h2{margin:0 0 12px;font-size:20px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .full{grid-column:1/-1}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type="text"], input[type="email"], textarea{
+      width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#111;color:#eaeaea;font-size:14px;resize:vertical;
+    }
+
+    textarea{min-height:120px}
+    .actions{display:flex;gap:12px;align-items:center;justify-content:flex-end;margin-top:8px}
+    .btn{
+      background:var(--accent);color:#111;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;border:none;cursor:pointer;
+    }
+.btn {
+  display: inline-block;   /* forza stessa base */
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--accent);
+  color: #111;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.btn:where(a) {
+  text-align: center;       /* per i link */
+}
+
+    .note{font-size:13px;color:var(--muted);margin-top:10px}
+    @media (max-width:640px){
+      form{grid-template-columns:1fr}
+      .actions{justify-content:stretch;flex-direction:column-reverse}
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="form-wrap" aria-live="polite">
+    <h2>CONTACT ME</h2>
+  
+    <form id="gform" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXBGUpSQArt0xnrTDw0Rqgvd36hBpi0K-gC3vQH1qUN4qSvg/formResponse?pli=1"  target="_blank" novalidate>
+   
+      <div>
+        <label for="name">Name</label>
+      
+        <input id="name" name="entry.1503899694" type="text" placeholder="Mario Rossi" required>
+      </div>
+
+      <!-- Email mittente -->
+      <div>
+        <label for="email">Email</label>
+   
+        <input id="email" name="entry.814934412" type="email" placeholder="mario@esempio.com" required>
+      </div>
+
+   
+      <div class="full">
+        <label for="message">Message</label>
+        <textarea id="message" name="entry.1256659559" placeholder="describe your request..." required></textarea>
+      </div>
+
+ 
+
+      <div class="full actions">
+<a class="btn" href="index.html">Back</a>
+        <button class="btn" type="submit">Send </button>
+       
+       
+      </div>
+
+   
+    </form>
+  </div>
+
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('gform');
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault(); // blocca il comportamento standard
+
+    const action = form.getAttribute('action'); // URL del tuo Google Form
+    const formData = new FormData(form);
+
+    try {
+      // invio in background verso Google Form
+      await fetch(action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // importante: Google Forms non restituisce CORS headers
+      });
+
+      // mostra messaggio o reindirizza
+      alert('Thanks!.');
+      window.location.href = "index.html"; // torna alla home (cambia se il file ha un altro nome)
+
+    } catch (err) {
+      console.error('Errore durante l’invio', err);
+      alert('Si è verificato un errore, riprova più tardi.');
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
